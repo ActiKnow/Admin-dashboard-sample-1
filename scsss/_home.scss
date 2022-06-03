@@ -1,0 +1,258 @@
+/** @format */
+
+.top-header {
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid darken($base-color, 10%);
+  .nav-brand {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .logo {
+      font-weight: bolder;
+      font-size: 1.1rem;
+      color: $primary-color;
+    }
+  }
+  .nav-list {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 38px;
+    li {
+      a {
+        padding: 1rem;
+        font-weight: 400;
+        text-transform: uppercase;
+        &.active {
+          background-color: $secondary-color;
+          color: $light-color;
+          padding: 0.5rem 1rem;
+          border-radius: 3px;
+        }
+      }
+    }
+  }
+}
+
+.quick-link {
+  background-color: $base-color;
+  ul {
+    display: flex;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    li {
+      a {
+        padding: 0 1rem;
+        font-size: 0.8rem;
+      }
+    }
+  }
+}
+
+.banner-1 {
+  //   background-image: url(../assets/freelance-bg.jpg);
+  background-color: $primary-color;
+  background-size: cover;
+  .banner-content {
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    h2 {
+      font-size: 3rem;
+      line-height: 60px;
+      color: $light-color;
+      font-weight: 100;
+      margin-bottom: 1rem;
+    }
+    p {
+      color: rgba($light-color, 0.4);
+    }
+    .banner-ctrl {
+      margin-top: 1rem;
+    }
+  }
+  .banner-img {
+    max-width: 350px;
+    width: 100%;
+    margin: 0 auto;
+
+    margin-top: 2rem;
+  }
+}
+
+.p-section {
+  padding: 2rem 0;
+}
+.section-title {
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  margin-bottom: 1rem;
+}
+
+.request-demo,
+.choose-offering,
+.business,
+.quality-agency {
+  background-color: $base-color;
+}
+
+.card {
+  border-radius: 2px;
+  overflow: hidden;
+  margin-bottom: 2rem;
+  border: 0;
+  box-shadow: 0 0 8px #ddd;
+  &.no-shadow {
+    box-shadow: none;
+  }
+  .card-img {
+    height: 140px;
+    border-radius: 0;
+    &.agency1 {
+      background-image: url(../assets/developer.jpg);
+    }
+    &.circle {
+      border-radius: 50%;
+      width: 140px;
+      background-color: $acent-color;
+      margin: 0 auto;
+    }
+  }
+  .content {
+    padding: 1rem;
+    .title {
+      font-weight: 600;
+      color: $secondary-color;
+    }
+  }
+}
+
+.brand-list {
+  display: flex;
+  justify-content: space-around;
+}
+
+.scope-list {
+  display: flex;
+  justify-content: space-around;
+  background-color: $light-color;
+  padding: 2rem;
+  .scope-bx {
+    padding: 0 1rem;
+    border-right: 1px solid $base-color;
+    &:first-child {
+      padding-left: 0;
+    }
+    &:last-child {
+      border: 0;
+      padding-right: 0;
+    }
+    h4 {
+      font-size: 0.9rem;
+      font-weight: 600;
+      margin-bottom: 0.4rem;
+    }
+    p {
+      font-size: 0.8rem;
+    }
+  }
+}
+
+.price-card {
+  text-align: center;
+  background-color: $light-color;
+  box-shadow: 0 0 6px darken($base-color, 10%);
+  margin-bottom: 2rem;
+  min-height: 500px;
+  .header,
+  .content {
+    padding: 1rem;
+  }
+  .header {
+    border-bottom: 1px solid darken($base-color, 4%);
+    h4 {
+      font-weight: 600;
+      font-size: 1rem;
+    }
+    .select-btn {
+      margin: 1rem 0;
+    }
+  }
+  .content {
+    text-align: left;
+    .feature-list {
+      font-size: 0.8rem;
+      li {
+        padding: 0.4rem 0;
+        position: relative;
+        padding-left: 1.4rem;
+        &:before {
+          font-family: "Font Awesome 5 Free";
+          content: "\f00c";
+          position: absolute;
+          font-weight: bolder;
+          left: 0;
+          top: 10px;
+          color: $primary-color;
+        }
+      }
+    }
+  }
+}
+
+.testimonials {
+  background-color: $secondary-color;
+  color: $light-color;
+  .main-title {
+    font-size: 2rem;
+  }
+  p {
+    color: rgba($light-color, 0.4);
+  }
+  .test-image {
+    max-width: 450px;
+  }
+}
+
+.skill-list {
+  font-size: 0.8rem;
+}
+
+.request-bx {
+  display: flex;
+  background-color: $light-color;
+  padding: 1rem;
+  justify-content: space-between;
+  h4 {
+    font-weight: 600;
+    font-size: 1.4rem;
+  }
+  p {
+    color: $secondary-color;
+  }
+  .request-btn {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.home-footer{
+  .title {
+    margin-bottom: 1rem;
+  }
+  .footer-list {
+    li {
+      a {
+        color: $light-color;
+        font-size: 0.8rem;
+      }
+    }
+  }
+}

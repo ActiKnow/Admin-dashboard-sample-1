@@ -1,0 +1,144 @@
+@import "./config";
+@import "./reset";
+@import "./typography";
+@import "./layout";
+@import "./auth";
+@import "./form";
+@import "./table";
+@import "./utilites";
+@import "./component";
+@import "./home";
+
+.user-account {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-bx {
+  position: relative;
+  .edit-hero-bx {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+}
+
+.dropdown-nav {
+  .dropdown-nav-list {
+    a {
+      background-color: rgba($light-color, 0.1);
+    }
+  }
+}
+
+// PAGE:TAGS COMPONENTS
+.comp-data-wapper{
+  .comp-wapper{
+    margin-bottom: 1rem;
+    max-height: 300px;
+    overflow-y: auto;
+    .comp-item{
+      display: flex;
+      justify-content: space-between;
+      border-bottom: 1px solid $base-color;
+      flex-wrap: wrap;
+      padding:0.5rem 0;
+      gap:1rem;
+      &:last-child{
+        border-bottom:0;
+      }
+      .comp{
+        flex: 1 1 60%;
+      }
+      .unit{
+        flex: 0 1 20%
+      }
+      .ctrl{
+        flex: 1 1 10%;
+      }
+      @media (max-width: 576px) {
+        .comp {
+          flex: 1 1 40%;
+        }
+        .unit {
+          flex: 0 1 30%;
+        }
+        .ctrl {
+          flex: 1 1 10%;
+        }
+      }
+    }
+  }
+  padding-bottom:1rem;
+  .comp-data{
+    background-color: $base-color;
+    display: flex;
+    padding:1rem;
+    gap:0.5rem;
+    .cd-input{
+      flex: 1 1 33%;
+    }
+  }
+}
+
+// PAGE: TAGS ALARM
+.alarm-wapper{
+  .alarm-item{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding:0.5rem;
+    background-color:rgba( $base-color, 0.5);
+    margin-bottom: 1rem;
+    border-radius: 5px;
+  .alarm-input{
+      &:first-child{
+        flex:1 1 100%;
+        margin-bottom: 0.5rem;
+        margin-right: 0;
+      }
+      flex: 1 1 20%;
+      margin-right: 0.5rem;
+      &:last-child{
+        margin-right: 0;
+      } 
+    }
+  }
+
+}
+
+.tag-type{
+  display: none
+}
+
+// PAGE: CYLENDER CONFIGURATION
+.notes-list{
+  li{
+    font-size: 0.8rem;
+    span{font-weight: 600}
+    border:1px solid rgba( $base-color, 0.9);
+    white-space: normal;
+    padding:0.5rem;
+    background-color: rgba( $base-color, 0.5);
+    margin-bottom: 0.5rem;
+    border-radius: 5px;
+    text-align: left;
+    color:$dark-color;
+    &:last-child{
+      margin-bottom: 0;
+    }
+  }
+}
+
+// .ui-widget.ui-widget-content{
+//   border:0;
+// }
+// .spinner{
+//   max-width: 150px;
+//   height: 33px!important;
+//   font-weight: normal;
+//   margin:0;
+// }
+
+@import "./mobile";

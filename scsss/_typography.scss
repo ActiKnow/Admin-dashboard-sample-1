@@ -1,0 +1,125 @@
+/** @format */
+.main-heading {
+  font-size: 1.6rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: $primary-color;
+}
+
+.sub-heading {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  color: $acent-color;
+}
+
+.main-title {
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.lead {
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: $acent-color;
+}
+
+p {
+  color: $dark-color;
+}
+
+.message{
+  font-size: 0.7rem;
+  &.error{
+    color:$danger-color;
+  }
+}
+
+.ft {
+  &-capitalize {
+    text-transform: capitalize;
+  }
+  &-uppercase {
+    text-transform: uppercase;
+  }
+  &-lower {
+    text-transform: lowercase;
+  }
+}
+
+.ft {
+  &-xs {
+    font-size: 0.8rem;
+  }
+  &-sm {
+    font-size: 1rem;
+  }
+  &-md {
+    font-size: 1.3rem;
+  }
+  &-lg {
+    font-size: 2rem;
+  }
+}
+
+.fw {
+  &-100 {
+    font-weight: 100;
+  }
+  &-200 {
+    font-weight: 200;
+  }
+  &-300 {
+    font-weight: 300;
+  }
+  &-400 {
+    font-weight: 400;
+  }
+  &-600 {
+    font-weight: 600;
+  }
+  &-800 {
+    font-weight: 800;
+  }
+}
+
+.ft {
+  &-primary {
+    color: $primary-color;
+  }
+  &-secondary {
+    color: $secondary-color;
+  }
+  &-warning {
+    color: $warning-color;
+  }
+  &-acent {
+    color: $acent-color;
+  }
+  &-light {
+    color: $light-color;
+    &-300 {
+      color: rgba($light-color, 0.7);
+    }
+  }
+  &-dark {
+    color: $dark-color;
+    &-300 {
+      color: lighten($dark-color, 30%);
+    }
+    &-500 {
+      color: lighten($dark-color, 50%);
+    }
+  }
+  &-base {
+    color: $base-color;
+  }
+  &-success {
+    color: $success-color;
+  }
+  &-danger {
+    color: $danger-color;
+  }
+}

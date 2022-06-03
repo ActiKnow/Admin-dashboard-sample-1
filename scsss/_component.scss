@@ -1,0 +1,361 @@
+/** @format */
+.logo {
+  max-width: 150px;
+  width: 100%;
+}
+
+.round {
+  &-xs {
+    border-radius: 3px;
+  }
+  &-sm {
+    border-radius: 5px;
+  }
+  &-md {
+    border-radius: 10px;
+  }
+  &-full {
+    border-radius: 50%;
+  }
+}
+
+.avtar {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  &-xs {
+    width: 30px;
+    height: 30px;
+  }
+  &-sm {
+    width: 40px;
+    height: 40px;
+  }
+  &-md {
+    width: 60px;
+    height: 60px;
+  }
+  &-lg {
+    width: 80px;
+    height: 80px;
+  }
+}
+
+.uc-list {
+  .uc-item {
+    display: flex;
+    align-items: center;
+    padding: 0.4rem 0;
+    border-bottom: 1px solid darken($base-color, 3%);
+    &:last-child {
+      border-bottom: 0;
+    }
+    &:hover {
+      background-color: $base-color;
+    }
+    .title {
+      color: $secondary-color;
+      font-size: 0.8rem;
+    }
+    .avtar {
+      margin-right: 10px;
+    }
+  }
+}
+
+.nc-list {
+  .nc-item {
+    padding: 0.2rem 0;
+    display: block;
+    border-bottom: 1px solid darken($base-color, 3%);
+    &:last-child {
+      border-bottom: 0;
+    }
+    .title {
+      margin-bottom: 0;
+      font-size: 0.9rem;
+      font-weight: 600;
+    }
+
+    .nc-date {
+      font-weight: 600;
+      font-size: 0.7rem;
+    }
+    p {
+      color: darken($base-color, 30%);
+    }
+  }
+}
+
+.block {
+  margin-bottom: 1rem;
+  border-radius: 10px;
+  overflow: hidden;
+  @include set-background($light-color);
+  &.of-hidden {
+    overflow: hidden;
+  }
+  &.base {
+    @include set-background($base-color);
+    border: 1px solid darken($base-color, 4%);
+  }
+  &.acent {
+    @include set-background($acent-color);
+  }
+  &.transparent {
+    background-color: transparent;
+  }
+  &.primary {
+    background-color: $primary-color;
+    .main-heading,
+    .main-title {
+      color: $light-color;
+    }
+    .sub-heading,
+    p {
+      color: rgba($light-color, 0.8);
+    }
+  }
+  &.secondary {
+    @include set-background($secondary-color);
+    .main-heading,
+    .main-title {
+      color: $light-color;
+    }
+    .sub-heading,
+    p {
+      color: rgba($light-color, 0.8);
+    }
+  }
+  &.light {
+    @include set-background($light-color);
+  }
+  &.dark {
+    @include set-background($dark-color);
+  }
+  &.no-padding {
+    .header,
+    .content,
+    .footer {
+      padding: 0.5rem 0;
+    }
+  }
+  &.bdr-0 {
+    border: 0;
+  }
+  .header,
+  .content,
+  .footer {
+    padding: 1rem;
+  }
+
+  .header {
+    padding-bottom: 0;
+    font-weight: 400;
+  }
+  .content {
+    font-size: 0.9rem;
+  }
+}
+
+.stats {
+  background-color: #fff;
+  padding: 0.5rem 1rem;
+  position: relative;
+  height: 100px;
+  border-radius: 10px;
+  z-index: 1;
+  overflow: hidden;
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+  align-items: center;
+  h4 {
+    font-size: 14px;
+    font-weight: bold;
+  }
+  span {
+    font-size: 20px;
+    font-weight: bold;
+    color: $light-color;
+  }
+  &::before {
+    position: absolute;
+    content: "";
+    height: 100px;
+    width: 200px;
+    background-color: rgba($primary-color, 0.7);
+    z-index: -1;
+    width: 150px;
+    right: -47px;
+    height: 250px;
+    top: -70px;
+    border-radius: 50px;
+    border: 6px solid #f7f7f7;
+    transform: rotate(45deg);
+  }
+}
+
+.stats-kpis {
+  display: flex;
+  background-color: $light-color;
+  border-radius: 10px;
+  padding: 10px;
+  align-items: center;
+  .sk-item {
+    flex: 1;
+    font-size: 0.7rem;
+    font-weight: 600;
+    padding: 0 0.2rem;
+    &.total-leads {
+      font-size: 30px;
+      font-weight: 600;
+
+      .leads {
+        font-size: 0.9rem;
+        &.up {
+          color: $success-color;
+        }
+        &.down {
+          color: $danger-color;
+        }
+      }
+    }
+  }
+}
+
+// UPLOAD AVTAR
+.avatar-upload {
+    position: relative;
+    width: 190px;
+    margin: 0 auto 50px;
+    .avatar-edit {
+        position: absolute;
+        right: 12px;
+        z-index: 1;
+        top: 10px;
+        input {
+            display: none;
+            + label {
+                display: inline-block;
+                width: 34px;
+                height: 34px;
+                margin-bottom: 0;
+                border-radius: 100%;
+                background: $primary-color;
+                border: 1px solid transparent;
+                box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.12);
+                cursor: pointer;
+                font-weight: normal;
+                transition: all .2s ease-in-out;
+               
+                &:after {
+                    content: "\f083";
+                    font-family:  "Font Awesome 5 Free";
+                    color: $light-color;
+                    position: absolute;
+                    font-size: 1rem;
+                    left: 0;
+                    right: 0;
+                    text-align: center;
+                    font-weight: 600;
+                    margin: auto;
+                }
+            }
+        }
+    }
+    .avatar-preview {
+        width: 192px;
+        height: 192px;
+        position: relative;
+        border-radius: 100%;
+        border: 6px solid #F8F8F8;
+        box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+        > div {
+            width: 100%;
+            height: 100%;
+            border-radius: 100%;
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+    }
+}
+
+// TABS
+.nav{
+  &.nav-tabs{
+    .nav-link{
+      border:0;
+      &:first-child{
+        padding: 1rem 0;
+        margin-right: 1.5rem;
+      }
+      &.active{
+        border-bottom: 3px solid $primary-color;
+        color:$primary-color;
+      }
+    }
+  }
+}
+
+.nav-pills{
+  .nav-link{
+    &.active{
+      background-color: $primary-color;
+    }
+  }
+}
+
+.loader{
+  display: flex;
+    position: fixed;
+    top: 0;
+    right: 0;
+    justify-content: center;
+    align-items: center;
+    z-index: 99999;
+    bottom: 0;
+    left: 0;
+    &.light{
+       background-color: rgba($light-color, 0.7);
+    }
+    &.dark{
+       background-color: rgba($dark-color, 0.7);
+    }
+  img{
+    width: 140px;
+  }
+}
+
+// UI COMBOBOX AUTOCOMPLETE
+.custom-combobox {
+  display: flex;
+}
+.custom-combobox-toggle {
+    background-color: transparent;
+    border-left: 0;
+    &:focus{
+      outline: none;
+    }
+}
+.custom-combobox-input {
+  border:1px solid $base-color;
+  background-color: transparent;
+  border-right: 0;;
+  width: 100%;
+  height: 35px;
+  padding:0.5rem;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  &:focus{
+    outline: none;
+    border-color: #80bdff;
+  }
+}
+.ui-autocomplete {
+  max-height: 100px;
+  overflow-y: auto;
+  /* prevent horizontal scrollbar */
+  overflow-x: hidden;
+}

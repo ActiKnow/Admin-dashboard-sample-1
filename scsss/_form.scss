@@ -1,0 +1,48 @@
+/** @format */
+
+label {
+  color: $dark-color;
+  font-weight: 600;
+  font-size: 0.8rem;
+}
+.form-control {
+  border-radius: 0;
+  font-size: 0.8rem;
+  font-weight: 600;
+  box-shadow: none;
+  height: 35px;
+  border-color: rgba($dark-color, 0.2);
+  border-radius: 3px;
+  &.error{
+    border-color: $danger-color;
+  }
+  &:focus {
+    box-shadow: none;
+    outline: none;
+  }
+  &::placeholder {
+    color: darken($base-color, 10%);
+    font-weight: normal;
+  }
+  &.highlight{
+    background-color: rgba($secondary-color, 0.1);
+    border: 1px solid rgba($secondary-color, 0.4);
+  }
+}
+
+.adon-group {
+  display: flex;
+  border: 1px solid rgba($dark-color, 0.2);
+  border-radius: 3px;
+  overflow: hidden;
+  &.error{
+    border:1px solid $danger-color;
+  }
+  .form-control,
+  .r-btn,
+  .icon {
+    border: 0;
+    border-radius: 0;
+    height: 33px;
+  }
+}
